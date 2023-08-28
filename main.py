@@ -34,7 +34,7 @@ def artemis_help():
     elif withwhat == "2":
         print("Soon")
         input("Press enter to continue")
-        (clear)
+        clear()
         artemis_help()
     elif withwhat == "3":
         clear()
