@@ -12,4 +12,4 @@ Please don't use this project for illegal purposes. I am not responsible for the
 I only tested this project on Python 3.11, modules are already installed (atleast right now).
 
 ## Developers
-Currently only [me(vortexsys)](https://github.com/vortexsys)
+Currently only [me (vortexsys)](https://github.com/vortexsys)
