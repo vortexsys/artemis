@@ -29,12 +29,15 @@ def artemis_help():
     if withwhat == "1":
         print("Please report any bug at https://github.com/vortexsys/artemis/issues")
         input("Press enter to continue")
+        (clear)
         artemis_help()
     elif withwhat == "2":
         print("Soon")
         input("Press enter to continue")
+        (clear)
         artemis_help()
     elif withwhat == "3":
+        clear()
         restart()
 
 def artemis():
@@ -47,10 +50,11 @@ def artemis():
 [>] """)
      if whattodo == "1":
          os.system('python menu.py')
+         clear()
      elif whattodo == "2":
          artemis_help()
      elif whattodo == "3":
-         input("waddup")
+         input("Soon")
      elif whattodo == "4":
          exit()
 artemis()
