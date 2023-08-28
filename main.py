@@ -11,8 +11,10 @@ from datetime import date
 ctypes.windll.kernel32.SetConsoleTitleW("Artemis v1| https://github.com/vortexsys/artemis")
 today = date.today()
 
+
 with open('./config.json') as f:
    config = json.load(f)
+
 
 def clear():
     os.system('cls' if os.name == 'nt' else 'clear')
@@ -21,24 +23,31 @@ def clear():
 def restart():
     os.system("python main.py")
 
+
 def artemis_help():
+    print("")
     withwhat = input("""With what do you need help?
 1. App Issue/Bug
 2. How to use
 3. Go back""")
+    
     if withwhat == "1":
         print("Please report any bug at https://github.com/vortexsys/artemis/issues")
         input("Press enter to continue")
-        (clear)
+        clear()
         artemis_help()
+
     elif withwhat == "2":
+        print("")
         print("Soon")
         input("Press enter to continue")
         clear()
         artemis_help()
+
     elif withwhat == "3":
         clear()
         restart()
+
 
 def artemis():
      print("Logging in on:",today,", what a beautiful day!")
@@ -48,13 +57,17 @@ def artemis():
 3. About
 4. Exit the program
 [>] """)
+     
      if whattodo == "1":
          os.system('python menu.py')
          clear()
+
      elif whattodo == "2":
          artemis_help()
+
      elif whattodo == "3":
          input("Soon")
+
      elif whattodo == "4":
          exit()
 artemis()

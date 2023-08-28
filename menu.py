@@ -1,7 +1,7 @@
-# Imports
+#### Imports
 import os
 
-# Definitions
+#### Definitions
 
 def list_python_files(directory):
     python_files = [file[:-3] for file in os.listdir(directory) if file.endswith(".py")]
@@ -20,7 +20,7 @@ def execute_python_file(filename):
 def clear():
     os.system('cls' if os.name == 'nt' else 'clear')
 
-# Code
+#### Code
 
 def menu():
     clear()
@@ -49,6 +49,7 @@ def menu():
                 execute_python_file(selected_filename)
             else:
                 print("Invalid choice.")
+
         elif user_input.lower() == "info":
             print("")
             print("The only preset files are example.py and restart.py")
