@@ -3,7 +3,6 @@ import os
 import json
 import time
 import ctypes
-from menu import menu
 
 #### From Imports
 from datetime import date
@@ -22,9 +21,6 @@ def clear():
 def restart():
     os.system("python main.py")
 
-def about():
-    print("Soon")
-
 def artemis_help():
     withwhat = input("""With what do you need help?
 1. App Issue/Bug
@@ -40,19 +36,21 @@ def artemis_help():
         artemis_help()
     elif withwhat == "3" or "3.":
         restart()
+
 def artemis():
      print("Logging in on:",today,", what a beautiful day!")
      whattodo = input("""What do you want to do today with this program?
 1. Enter the menu
 2. Get help
 3. About
-4. Exit the program""")
-     if whattodo == "1" or "1.":
-         menu()
-     elif whattodo == "2" or "2.":
+4. Exit the program
+[>] """)
+     if whattodo == "1":
+         os.system('python menu.py')
+     elif whattodo == "2":
          artemis_help()
-     elif whattodo == "3" or "3.":
-         about()
-     elif whattodo == "4" or "4.":
+     elif whattodo == "3":
+         input("waddup")
+     elif whattodo == "4":
          exit()
 artemis()
