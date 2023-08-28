@@ -3,6 +3,7 @@ import os
 import json
 import time
 import ctypes
+from menu import menu
 
 #### From Imports
 from datetime import date
@@ -20,9 +21,6 @@ def clear():
 #### Standalone Code
 def restart():
     os.system("python main.py")
-
-def menu():
-    print("Soon")
 
 def about():
     print("Soon")
