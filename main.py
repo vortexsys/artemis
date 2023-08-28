@@ -26,15 +26,15 @@ def artemis_help():
 1. App Issue/Bug
 2. How to use
 3. Go back""")
-    if withwhat == "1" or "1.":
+    if withwhat == "1":
         print("Please report any bug at https://github.com/vortexsys/artemis/issues")
         input("Press enter to continue")
         artemis_help()
-    elif withwhat == "2" or "2.":
+    elif withwhat == "2":
         print("Soon")
         input("Press enter to continue")
         artemis_help()
-    elif withwhat == "3" or "3.":
+    elif withwhat == "3":
         restart()
 
 def artemis():
