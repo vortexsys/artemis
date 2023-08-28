@@ -19,6 +19,7 @@ def clear():
 
 #### Standalone Code
 def restart():
+    clear()
     os.system("python main.py")
 
 def artemis_help():
@@ -27,18 +28,23 @@ def artemis_help():
 2. How to use
 3. Go back""")
     if withwhat == "1":
+        print("")
         print("Please report any bug at https://github.com/vortexsys/artemis/issues")
         input("Press enter to continue")
         (clear)
         artemis_help()
     elif withwhat == "2":
+        print("")
         print("Soon")
         input("Press enter to continue")
         (clear)
         artemis_help()
     elif withwhat == "3":
-        clear()
         restart()
+    else:
+        input("Wrong input! Press Enter to try again")
+        clear()
+        artemis_help()
 
 def artemis():
      print("Logging in on:",today,", what a beautiful day!")
@@ -54,7 +60,9 @@ def artemis():
      elif whattodo == "2":
          artemis_help()
      elif whattodo == "3":
+         print("")
          input("Soon")
+         restart()
      elif whattodo == "4":
          exit()
 artemis()

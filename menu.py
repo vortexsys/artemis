@@ -34,6 +34,7 @@ def menu():
     extensions_directory = os.path.abspath("./extensions/")
     python_files = list_python_files(extensions_directory)
     
+    print("")
     print("enter info for file information")
     print("Available Python files:")
     for index, filename in enumerate(python_files, start=1):
@@ -55,7 +56,6 @@ def menu():
             print("example.py - gives you an example of how the file can look")
             print("restart.py - returns you to main.py, I wanted to make this an external file as an example")
             input("Press enter to continue!")
-            clear()
             menu()
         else:
             print("Invalid input.")
