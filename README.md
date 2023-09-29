@@ -19,7 +19,9 @@ This is only the standalone version tho, official python files will be [here](ht
 Please don't use this project for illegal purposes. I am not responsible for the user's actions and I do not support any Terms brekaing or illegal movements, this is educational purposes only.
 
 ## Requirements
-I only tested this project on Python 3.11, modules are already installed (atleast right now).
+I only tested this project on Python 3.11
+
+Modules: Currently only datetime isn't preinstalled.
 
 ## Developers
 Currently only [me (vortexsys)](https://github.com/vortexsys)

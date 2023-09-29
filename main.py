@@ -8,7 +8,7 @@ import ctypes
 from datetime import date
 
 #### Startup stuff
-ctypes.windll.kernel32.SetConsoleTitleW("Artemis v1| https://github.com/vortexsys/artemis")
+ctypes.windll.kernel32.SetConsoleTitleW("Artemis v1")
 today = date.today()
 
 
@@ -29,7 +29,8 @@ def artemis_help():
     withwhat = input("""With what do you need help?
 1. App Issue/Bug
 2. How to use
-3. Go back""")
+3. Credits
+4. Go back""")
     
     if withwhat == "1":
         print("Please report any bug at https://github.com/vortexsys/artemis/issues")
@@ -45,6 +46,10 @@ def artemis_help():
         artemis_help()
 
     elif withwhat == "3":
+        print("Made by https://github.com/vortexsys/")
+        print("Official Project repository: https://github.com/vortexsys/artemis")
+        
+    elif withwhat == "4":
         clear()
         restart()
 
