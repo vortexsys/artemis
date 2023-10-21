@@ -1,7 +1,7 @@
-# Imports
+#### Imports
 import os
 
-# Definitions
+#### Definitions
 
 def list_python_files(directory):
     python_files = [file[:-3] for file in os.listdir(directory) if file.endswith(".py")]
@@ -20,7 +20,7 @@ def execute_python_file(filename):
 def clear():
     os.system('cls' if os.name == 'nt' else 'clear')
 
-# Code
+#### Code
 
 def menu():
     clear()
@@ -34,8 +34,7 @@ def menu():
     extensions_directory = os.path.abspath("./extensions/")
     python_files = list_python_files(extensions_directory)
     
-    print("")
-    print("enter info for file information")
+    print("Enter `info` for file information")
     print("Available Python files:")
     for index, filename in enumerate(python_files, start=1):
         print(f"{index}. {filename}")
@@ -50,12 +49,14 @@ def menu():
                 execute_python_file(selected_filename)
             else:
                 print("Invalid choice.")
+
         elif user_input.lower() == "info":
             print("")
             print("The only preset files are example.py and restart.py")
             print("example.py - gives you an example of how the file can look")
             print("restart.py - returns you to main.py, I wanted to make this an external file as an example")
             input("Press enter to continue!")
+            clear()
             menu()
         else:
             print("Invalid input.")
