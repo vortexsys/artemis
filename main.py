@@ -8,21 +8,22 @@ import ctypes
 from datetime import date
 
 #### Startup stuff
-ctypes.windll.kernel32.SetConsoleTitleW("Artemis v1")
+ctypes.windll.kernel32.SetConsoleTitleW("Artemis v1 | vortexsys")
 today = date.today()
 
 
 with open('./config.json') as f:
    config = json.load(f)
 
+### Definitions
 
 def clear():
     os.system('cls' if os.name == 'nt' else 'clear')
 
-#### Standalone Code
 def restart():
     os.system("python main.py")
 
+#### Standalone Code
 
 def artemis_help():
     print("")
@@ -52,6 +53,9 @@ def artemis_help():
     elif withwhat == "4":
         clear()
         restart()
+    else:
+        print("Invalid input!")
+        artemis_help()
 
 
 def artemis():
@@ -64,7 +68,7 @@ def artemis():
 [>] """)
      
      if whattodo == "1":
-         os.system('python menu.py')
+         os.system('python ./python/menu.py')
          clear()
 
      elif whattodo == "2":

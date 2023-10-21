@@ -34,7 +34,7 @@ def menu():
     extensions_directory = os.path.abspath("./extensions/")
     python_files = list_python_files(extensions_directory)
     
-    print("enter info for file information")
+    print("Enter `info` for file information")
     print("Available Python files:")
     for index, filename in enumerate(python_files, start=1):
         print(f"{index}. {filename}")
