@@ -1,5 +1,5 @@
 ## ATTENTION
-Please do not have anything else in a folder with artemis if you use update_project.bat because it will try to delete everything in the folder except update_project.bat wich would be bad for you if you have important data in it lol
+Please do not have anything else in a folder with artemis if you use update_project.bat because it will try to delete everything in the folder except update_project.bat wich would be bad for you if you have important data in it.
 
 ## Newest commits here
 [click here](https://github.com/vortexsys/artemis/tree/experimental)
