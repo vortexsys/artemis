@@ -1,5 +1,6 @@
 #### Imports
 import os
+import time
 
 #### Definitions
 
@@ -35,6 +36,7 @@ def menu():
     python_files = list_python_files(extensions_directory)
     
     print("Enter `info` for file information")
+    print("Enter `check` to check for new files")
     print("Available Python files:")
     for index, filename in enumerate(python_files, start=1):
         print(f"{index}. {filename}")
@@ -57,6 +59,10 @@ def menu():
             print("restart.py - returns you to main.py, I wanted to make this an external file as an example")
             input("Press enter to continue!")
             clear()
+            menu()
+        elif user_input.lower() == "check":
+            print("Reloading....")
+            time.sleep(0.20)
             menu()
         else:
             print("Invalid input.")

@@ -6,6 +6,7 @@ import ctypes
 
 #### From Imports
 from datetime import date
+from colorama import Fore
 
 #### Startup stuff
 ctypes.windll.kernel32.SetConsoleTitleW("Artemis v1 | vortexsys")
@@ -59,7 +60,7 @@ def artemis_help():
 
 
 def artemis():
-     print("Logging in on:",today,", what a beautiful day!")
+     print(Fore.RED + "Logging in on:",today,", what a beautiful day!")
      whattodo = input("""What do you want to do today with this program?
 1. Enter the menu
 2. Get help
