@@ -26,7 +26,7 @@ By using this Program you accept my Terms: Nothing illegal (Laws of Austria), do
 ## Requirements
 I only tested this project on Python 3.11
 
-Modules: Currently only datetime isn't preinstalled.
+Modules: Currently only datetime and requests aren't preinstalled.
 
 ## Developers
 Currently only [me (vortexsys)](https://github.com/vortexsys)

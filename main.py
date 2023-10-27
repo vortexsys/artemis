@@ -17,7 +17,7 @@ today = date.today()
 with open('./config.json') as f:
    config = json.load(f)
 
-url = config["discord-hook"]
+url = config["discord-webhook"]
 
 ### Definitions
 def clear():
