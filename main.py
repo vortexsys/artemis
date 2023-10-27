@@ -20,7 +20,6 @@ with open('./config.json') as f:
 url = config["discord-hook"]
 
 ### Definitions
-
 def clear():
     os.system('cls' if os.name == 'nt' else 'clear')
 
@@ -28,7 +27,6 @@ def restart():
     os.system("python main.py")
 
 #### Standalone Code
-
 def artemis_help():
     clear()
     print("""

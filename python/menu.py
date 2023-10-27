@@ -3,7 +3,6 @@ import os
 import time
 
 #### Definitions
-
 def list_python_files(directory):
     python_files = [file[:-3] for file in os.listdir(directory) if file.endswith(".py")]
     return python_files
@@ -59,12 +58,20 @@ def menu():
             input("Press enter to continue!")
             clear()
             menu()
+
         elif user_input.lower() == "check":
             print("Reloading....")
             time.sleep(0.20)
             menu()
+        
+        elif user_input.lower() == "back":
+            clear()
+            os.system('python main.py')
+
         else:
             print("Invalid input.")
+            time.sleep(0.50)
+            menu()
     except ValueError:
         print("Invalid input. Please enter a valid number.")
 
