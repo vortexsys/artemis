@@ -22,7 +22,6 @@ def clear():
     os.system('cls' if os.name == 'nt' else 'clear')
 
 #### Code
-
 def menu():
     clear()
     print("""

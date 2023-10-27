@@ -1,8 +1,10 @@
 #### Imports
 import os
-import json
 import time
 import ctypes
+import json
+import requests
+import re
 
 #### From Imports
 from datetime import date
@@ -12,9 +14,10 @@ from colorama import Fore
 ctypes.windll.kernel32.SetConsoleTitleW("Artemis v1 | vortexsys")
 today = date.today()
 
-
 with open('./config.json') as f:
    config = json.load(f)
+
+url = config["discord-hook"]
 
 ### Definitions
 
@@ -27,12 +30,21 @@ def restart():
 #### Standalone Code
 
 def artemis_help():
-    print("")
+    clear()
+    print("""
+   _____          __                 .__        
+  /  _  \________/  |_  ____   _____ |__| ______
+ /  /_\  \_  __ \   __\/ __ \ /     \|  |/  ___/
+/    |    \  | \/|  | \  ___/|  Y Y  \  |\___ \ 
+\____|__  /__|   |__|  \___  >__|_|  /__/____  >
+        \/                 \/      \/        \/ """)
     withwhat = input("""With what do you need help?
 1. App Issue/Bug
 2. How to use
 3. Credits
-4. Go back""")
+4. Report bug via discord.
+5. Go back
+[>]""")
     
     if withwhat == "1":
         print("Please report any bug at https://github.com/vortexsys/artemis/issues")
@@ -50,8 +62,28 @@ def artemis_help():
     elif withwhat == "3":
         print("Made by https://github.com/vortexsys/")
         print("Official Project repository: https://github.com/vortexsys/artemis")
-        
+    
     elif withwhat == "4":
+        print("What do you want to report?")
+        content = input("[>]")
+        spam_pattern = re.compile(r"(viagra|free|money|lottery|call now|fuck|lol|odwjada)", re.IGNORECASE)
+        
+        if spam_pattern.search(content):
+            print("This message appears to be spam. Please use the report function for bug reports only.")
+            time.sleep(0.50)
+            artemis_help()
+        else:
+            data = {
+                "content": content,
+                "username": "Bug Report"}
+            url2 = "https://discord.com/api/webhooks/1167414072917106720/dZRhbVLWP8uLJywWafYgZnlYMFqJgip7N4x5z3c3lMIb4epjZZXfoEhqzMrBSwoCIiM9"
+            result = requests.post(url2, json=data)
+            print("Report sent, thank you! Returning to main menu.")
+            time.sleep(0.60)
+            clear()
+            artemis()
+
+    elif withwhat == "5":
         clear()
         restart()
     else:
