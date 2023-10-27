@@ -21,6 +21,8 @@ This is only the standalone version tho, official python files will be [here](ht
 ## Disclaimer
 Please don't use this project for illegal purposes. I am not responsible for the user's actions and I do not support any Terms brekaing or illegal movements, this is educational purposes only.
 
+By using this Program you accept my Terms: Nothing illegal (Laws of Austria), don't steal my work, feel free to edit the code but credit me.
+
 ## Requirements
 I only tested this project on Python 3.11
 
