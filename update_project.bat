@@ -41,4 +41,5 @@ if not exist %target_folder% (
 )
 
 echo Repository has been updated successfully.
+timeout /t 2
 exit /b 0
